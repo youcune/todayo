@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja" manifest="appcache.manifest">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>todayo</title>
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet" href="todayo.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script src="core.js"></script>
+	<script src="view.js"></script>
+</head>
+<body>
+<div data-role="page">
+	<div data-role="header">
+		<h1>todayo</h1>
+	</div><!-- end of header -->
+	<div data-role="content">
+		<form id="add">
+			<input type="text" name="q" id="q" value="" placeholder="今日のタスクを追加">
+		</form>
+		
+		<div data-role="fieldcontain">
+			<fieldset id="tasks"></fieldset>
+		</div><!-- end of fieldcontain -->
+		
+		<fieldset data-role="controlgroup" data-type="horizontal" data-role="fieldcontain" data-mini="true">
+			<label><input type="radio" name="display" value="only-todo" id="display-only-todo" checked="checked">未完了のみ</label>
+			<label><input type="radio" name="display" value="all" id="display-all">すべて表示</label>
+		</fieldset>
+		<a href="javascript:void(0);" id="delete_all" data-role="button" data-theme="f">すべてのタスクを削除</a>
+	</div><!-- end of content -->
+</div><!-- end of page -->
+</body>
+</html>
